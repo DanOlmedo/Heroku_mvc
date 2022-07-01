@@ -1,9 +1,21 @@
 const express = require('express');
+const exphbs = require('express-handlebars');
+const path = require('path');
+
 const app = express();
-const port = 3001;
+const PORT = process.env.PORT || 3001;
+const routes = require('./controllers/index');
 
-app.get('/', (req,res) => {
-    res.send('test');
-})
+const hbs = exphbs.create({});
 
-app.listen(process.env.PORT || port, () => console.log(`Listening at http://localhost:${port}`))
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
+app.set('views');
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(routes);
+
+app.listen(PORT, () => console.log('Now listening at http://localhost:3001'));
