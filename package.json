@@ -1,0 +1,22 @@
+{
+  "name": "heroku_mvc",
+  "version": "1.0.0",
+  "description": "Heroku deployed MVC blog application",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanOlmedo/MVC_blog.git"
+  },
+  "keywords": [
+    "MVC"
+  ],
+  "author": "DanOlmedo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanOlmedo/MVC_blog/issues"
+  },
+  "homepage": "https://github.com/DanOlmedo/MVC_blog#readme"
+}
