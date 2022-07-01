@@ -2,9 +2,10 @@
   "name": "heroku_mvc",
   "version": "1.0.0",
   "description": "Heroku deployed MVC blog application",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "node index.js"
+    "start": "node server.js",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
